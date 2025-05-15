@@ -448,3 +448,59 @@ button:hover {
     width: auto;
     margin-top: 0;
 }
+
+/* Estilos responsivos para tablets y celulares */
+@media (max-width: 768px) {
+    .navegacion-principal {
+        flex-direction: column;
+        gap: 1rem;
+        align-items: center;
+    }
+
+    .titulo {
+        font-size: 3rem;
+    }
+
+    .formulario, form, section.contenedor {
+        padding: 1.5rem;
+        margin: 1rem;
+    }
+
+    table {
+        font-size: 1.4rem;
+        width: 100%;
+        overflow-x: auto;
+        display: block;
+    }
+
+    th, td {
+        padding: 0.8rem;
+    }
+
+    .button {
+        font-size: 1.6rem;
+        padding: 1rem 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .titulo {
+        font-size: 2.4rem;
+    }
+
+    .navegacion-principal a {
+        font-size: 1.6rem;
+        padding: 0.8rem 1.5rem;
+    }
+
+    .button {
+        font-size: 1.5rem;
+        padding: 0.8rem 1.5rem;
+    }
+
+    .campo label,
+    .campo input,
+    .campo select {
+        font-size: 1.5rem;
+    }
+}
