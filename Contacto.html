@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - Gestión de Citas Médicas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1 class="titulo">Contacto</h1>
+    </header>
+    <div class="nav-bg">
+        <nav class="navegacion-principal contenedor">
+            <a href="index.html">Inicio</a>
+            <a href="Agendar.html">Agendar Cita</a>
+            <a href="Pacientes.html">Pacientes</a>
+            <a href="Doctores.html">Doctores</a>
+            <a href="Contacto.html">Contacto</a>
+            <a href="registro.html" class="button">Registrar</a>
+            <a href="iniciar.html" class="button">Iniciar Sesión</a>
+        </nav>
+    </div>
+    
+
+    <section class="contenedor">
+        <form id="formularioContacto" method="POST" action="...">
+
+        <h2>Contáctanos</h2>
+        
+        <!-- Información de Contacto -->
+        <div class="info-contacto">
+            <p><strong>📍 Dirección:</strong> Calle Salud #123, Ciudad</p>
+            <p><strong>📞 Teléfono:</strong> +123 456 7890</p>
+            <p><strong>📧 Correo:</strong> contacto@clinicamedica.com</p>
+            <p><strong>📆 Horarios:</strong></p>
+            <ul>
+                <li><strong>Lunes - Viernes:</strong> 8:00 AM - 6:00 PM</li>
+                <li><strong>Sábado:</strong> 9:00 AM - 2:00 PM</li>
+                <li><strong>Domingo:</strong> Cerrado</li>
+            </ul>
+        </div>
+
+        <!-- Formulario de Contacto -->
+        <section class="formulario">
+            <form action="#" method="POST">
+                <fieldset>
+                    <legend>Envíanos un mensaje</legend>
+                    <div class="campo">
+                        <label for="nombre">Nombre:</label>
+                        <input type="text" id="nombre" name="nombre" required>
+                    </div>
+                    <div class="campo">
+                        <label for="email">Correo Electrónico:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="campo">
+                        <label for="motivo">Motivo de contacto:</label>
+                        <select id="motivo" name="motivo">
+                            <option value="cita">Agendar Cita</option>
+                            <option value="consulta">Consulta General</option>
+                            <option value="soporte">Soporte Técnico</option>
+                        </select>
+                    </div>
+                    <div class="campo">
+                        <label for="mensaje">Mensaje:</label>
+                        <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+                    </div>
+                    <button type="submit" class="button">Enviar</button>
+                </fieldset>
+            </form>
+        </section>
+
+        <!-- Redes Sociales -->
+        <div class="redes-sociales">
+            <p>Síguenos en:</p>
+            <a href="#" class="button">Facebook</a>
+            <a href="#" class="button">Instagram</a>
+            <a href="#" class="button">Twitter</a>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Gestión de Citas Médicas</p>
+    </footer>
+</body>
+</html>

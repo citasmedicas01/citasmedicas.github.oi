@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Citas Médicas</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <style>
+        body {
+            background: none;
+        }
+        .hero {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 50px;
+            position: relative;
+        }
+        .hero-content {
+            flex: 1;
+            max-width: 50%;
+            z-index: 2;
+        }
+        .hero-image {
+            flex: 1;
+            max-width: 50%;
+            height: 400px;
+            background: url('medico.jpg') no-repeat center center/contain;
+            background-size: contain;
+        }
+    </style>
+</head>
+<body>
+    <!-- Preloader -->
+    <div id="preloader" class="preloader"></div>
+
+    <!-- Header -->
+    <header class="header">
+        <h1 class="titulo">Gestión de Citas Médicas</h1>
+    </header>
+
+    <!-- Navegación -->
+    <div class="nav-bg">
+        <nav class="navegacion-principal contenedor">
+            <a href="index.html">Inicio</a>
+            <a href="Agendar.html">Agendar Cita</a>
+            <a href="Pacientes.html">Pacientes</a>
+            <a href="Doctores.html">Doctores</a>
+            <a href="Contacto.html">Contacto</a>
+            <a href="registro.html" class="button">Registrar</a>
+            <a href="iniciar.html" class="button">Iniciar Sesión</a>
+            <a href="Manual de Usuario.pdf" class="button" download>Manual de Usuario</a>
+        </nav>
+    </div>
+
+    <!-- Sección Principal -->
+    <section class="hero">
+        <div class="hero-content">
+            <h2>Bienvenido a la Gestión de Citas Médicas</h2>
+            <p>Programa y gestiona tus citas médicas de manera rápida y sencilla.</p>
+            <a href="Agendar.html" class="cta-button">Agendar Cita</a>
+        </div>
+        <div class="hero-image"></div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Gestión de Citas Médicas | Todos los derechos reservados.</p>
+    </footer>
+
+    <script>
+        // Preloader
+        window.addEventListener("load", function() {
+            document.getElementById("preloader").style.display = "none";
+        });
+    </script>
+</body>
+</html>

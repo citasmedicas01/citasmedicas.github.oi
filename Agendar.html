@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agendar Cita</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1 class="titulo">Agendar Cita</h1>
+    </header>
+
+    <section class="formulario contenedor">
+        <form action="agendar.php" method="POST">
+            <fieldset>
+                <legend>Datos de la Cita</legend>
+
+                <div class="campo">
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" name="nombre" required>
+                </div>
+
+                <div class="campo">
+                    <label for="fecha">Fecha:</label>
+                    <input type="date" id="fecha" name="fecha" required>
+                </div>
+
+                <div class="campo">
+                    <label for="especialidad">Especialidad:</label>
+                    <select id="especialidad" name="especialidad" required>
+                        <option value="">-- Selecciona una especialidad --</option>
+                        <option value="general">Medicina General</option>
+                        <option value="pediatria">Pediatría</option>
+                        <option value="dermatologia">Dermatología</option>
+                        <option value="cardiologia">Cardiología</option>
+                        <option value="ginecologia">Ginecología</option>
+                        <option value="neurologia">Neurología</option>
+                        <option value="traumatologia">Traumatología</option>
+                        <option value="psiquiatria">Psiquiatría</option>
+                        <option value="oftalmologia">Oftalmología</option>
+                        <option value="urologia">Urología</option>
+                        <option value="endocrinologia">Endocrinología</option>
+                        <option value="rehabilitacion">Rehabilitación</option>
+                        <option value="odontologia">Odontología</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="button">Reservar Cita</button>
+            </fieldset>
+        </form>
+
+        <div class="botones-container">
+            <button onclick="window.location.href='index.html'" class="button">Volver al Menú Principal</button>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Gestión de Citas Médicas</p>
+    </footer>
+</body>
+</html>

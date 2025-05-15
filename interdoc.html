@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel del Doctor</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1 class="titulo">Panel del Doctor</h1>
+    </header>
+
+    <div class="nav-bg">
+        <nav class="navegacion-principal contenedor">
+            <a href="index.html">Inicio</a>
+            <a href="Agendar.html">Agendar Cita</a>
+            <a href="Pacientes.html">Pacientes</a>
+            <a href="Doctores.html">Doctores</a>
+            <a href="Contacto.html">Contacto</a>
+            <a href="registro.html" class="button">Registrar</a>
+            <a href="iniciar.html" class="button">Iniciar Sesión</a>
+        </nav>
+    </div>
+    
+
+    <section class="contenedor">
+        <h2>Mis Citas</h2>
+        <table class="tabla-doctores">
+            <thead>
+                <tr>
+                    <th>Fecha</th>
+                    <th>Paciente</th>
+                    <th>Especialidad</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Aquí agregarás dinámicamente las citas del doctor -->
+                <tr>
+                    <td>2025-03-20</td>
+                    <td>Juan Pérez</td>
+                    <td>Medicina General</td>
+                    <td>
+                        <button class="button">Ver Cita</button>
+                        <button class="button">Cancelar</button>
+                    </td>
+                </tr>
+                <!-- Repetir fila para cada cita -->
+            </tbody>
+        </table>
+
+        <div class="acciones">
+            <button onclick="window.location.href='Horario.html'" class="button">Gestionar Horarios</button>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Gestión de Citas Médicas</p>
+    </footer>
+</body>
+</html>

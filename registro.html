@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro - Gestión de Citas Médicas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1 class="titulo">Registro - Gestión de Citas Médicas</h1>
+    </header>
+
+    <section class="formulario contenedor">
+        <form action="registro.php" method="POST">
+            <fieldset>
+                <legend>Registro de Usuario</legend>
+
+                <!-- Tipo de usuario -->
+                <div class="campo">
+                    <label for="tipoUsuario">¿Eres un paciente o un doctor?</label>
+                    <select id="tipoUsuario" name="tipoUsuario" onchange="mostrarCampos()" required>
+                        <option value="" disabled selected>Selecciona una opción</option>
+                        <option value="paciente">Paciente</option>
+                        <option value="doctor">Doctor</option>
+                    </select>
+                </div>
+
+                <!-- Comunes -->
+                <div class="campo">
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" name="nombre" required>
+                </div>
+
+                <div class="campo">
+                    <label for="email">Correo Electrónico:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div class="campo">
+                    <label for="telefono">Teléfono:</label>
+                    <input type="tel" id="telefono" name="telefono" required>
+                </div>
+
+                <div class="campo">
+                    <label for="contrasena">Contraseña:</label>
+                    <input type="password" id="contrasena" name="contrasena" required>
+                </div>
+
+                <!-- Campos para pacientes -->
+                <div id="camposPaciente" class="camposEspecificos" style="display: none;">
+                    <div class="campo">
+                        <label for="fechaNacimiento">Fecha de Nacimiento:</label>
+                        <input type="date" id="fechaNacimiento" name="fechaNacimiento">
+                    </div>
+                </div>
+
+                <!-- Campos para doctores -->
+                <div id="camposDoctor" class="camposEspecificos" style="display: none;">
+                    <div class="campo">
+                        <label for="especialidad">Especialidad:</label>
+                        <input type="text" id="especialidad" name="especialidad">
+                    </div>
+
+                    <div class="campo">
+                        <label for="consultorio">Consultorio:</label>
+                        <input type="text" id="consultorio" name="consultorio">
+                    </div>
+                </div>
+
+                <button type="submit" class="button">Registrar</button>
+                <button type="button" class="button volver" onclick="window.location.href='index.html'">Volver al Inicio</button>
+            </fieldset>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Gestión de Citas Médicas</p>
+    </footer>
+
+    <script>
+        function mostrarCampos() {
+            const tipoUsuario = document.getElementById('tipoUsuario').value;
+            const camposPaciente = document.getElementById('camposPaciente');
+            const camposDoctor = document.getElementById('camposDoctor');
+
+            if (tipoUsuario === 'paciente') {
+                camposPaciente.style.display = 'block';
+                camposDoctor.style.display = 'none';
+                document.getElementById('fechaNacimiento').required = true;
+                document.getElementById('especialidad').required = false;
+                document.getElementById('consultorio').required = false;
+            } else if (tipoUsuario === 'doctor') {
+                camposPaciente.style.display = 'none';
+                camposDoctor.style.display = 'block';
+                document.getElementById('fechaNacimiento').required = false;
+                document.getElementById('especialidad').required = true;
+                document.getElementById('consultorio').required = true;
+            }
+        }
+    </script>
+</body>
+</html>
